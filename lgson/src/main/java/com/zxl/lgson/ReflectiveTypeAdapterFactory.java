@@ -1,4 +1,4 @@
-package com.zxl.gson;
+package com.zxl.lgson;
 
 import com.google.gson.FieldNamingStrategy;
 import com.google.gson.Gson;
@@ -175,7 +175,7 @@ public class ReflectiveTypeAdapterFactory implements TypeAdapterFactory {
             void write(JsonWriter writer, Object value)
                     throws IOException, IllegalAccessException {
                 Object fieldValue = field.get(value);
-                TypeAdapter t = new com.zxl.gson.TypeAdapterRuntimeTypeWrapper(context, this.typeAdapter, fieldType.getType());
+                TypeAdapter t = new TypeAdapterRuntimeTypeWrapper(context, this.typeAdapter, fieldType.getType());
                 t.write(writer, fieldValue);
             }
 
@@ -316,7 +316,7 @@ public class ReflectiveTypeAdapterFactory implements TypeAdapterFactory {
             }
             //增加判断是错误的ARRAY的类型（应该是object）,移动in的下标到结束，移动下标的代码在下方
             if (in.peek() == JsonToken.BEGIN_ARRAY) {
-                com.zxl.gson.GsonTools.readArray(in);
+                GsonTools.readArray(in);
                 return constructor.construct();
             }
             //增加判断是错误的NUMBER的类型（应该是object）,移动in的下标到结束，移动下标的代码在下方

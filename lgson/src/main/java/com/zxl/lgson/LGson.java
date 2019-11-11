@@ -1,4 +1,4 @@
-package com.zxl.gson;
+package com.zxl.lgson;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -9,7 +9,6 @@ import com.google.gson.internal.Excluder;
 import com.google.gson.internal.bind.CollectionTypeAdapterFactory;
 import com.google.gson.internal.bind.TypeAdapters;
 import com.google.gson.reflect.TypeToken;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -47,17 +46,17 @@ public class LGson {
             f.setAccessible(true);
             final Map<Type, InstanceCreator<?>> val = (Map<Type, InstanceCreator<?>>) f.get(gsonBuilder);//得到此属性的值
             //注册String类型处理器
-            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(String.class, com.zxl.gson.GsonTools.stringTypeAdapter()));
+            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(String.class,GsonTools.stringTypeAdapter()));
             //注册int.class, Integer.class处理器
-            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(int.class, Integer.class, com.zxl.gson.GsonTools.longAdapter(0)));
+            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(int.class, Integer.class, GsonTools.longAdapter(0)));
             //注册short.class, Short.class处理器
-            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(short.class, Short.class, com.zxl.gson.GsonTools.longAdapter(1)));
+            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(short.class, Short.class, GsonTools.longAdapter(1)));
             //注册long.class, Long.class处理器
-            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(long.class, Long.class, com.zxl.gson.GsonTools.longAdapter(2)));
+            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(long.class, Long.class, GsonTools.longAdapter(2)));
             //注册double.class, Double.class处理器
-            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(double.class, Double.class, com.zxl.gson.GsonTools.longAdapter(3)));
+            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(double.class, Double.class, GsonTools.longAdapter(3)));
             //注册float.class, Float.class处理器
-            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(float.class, Float.class, com.zxl.gson.GsonTools.longAdapter(4)));
+            gsonBuilder.registerTypeAdapterFactory(TypeAdapters.newFactory(float.class, Float.class, GsonTools.longAdapter(4)));
             //注册反射对象的处理器
             gsonBuilder.registerTypeAdapterFactory(new ReflectiveTypeAdapterFactory(new ConstructorConstructor(val), FieldNamingPolicy.IDENTITY, Excluder.DEFAULT));
             //注册集合的处理器

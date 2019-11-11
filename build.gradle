@@ -1,12 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-ext {
-    userOrg = 'suifengpiaobo'
-    repoName = "LGson"
-    groupId = 'com.zxl.gson'
-    desc = '解决因接口返回数据错误(如对象变成了数组，对象变成了null，数组变成对象等)，造成的解析错误。'
-    website = 'https://github.com/suifengpiaobo/LGson'
-    licences = ['Apache-2.0']
-}
+
 buildscript {
     repositories {
         google()
@@ -26,10 +19,15 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven {url 'https://dl.bintray.com/suifengpiaobo/maven'}
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// 指定javadoc UTF-8格式
+task javadoc(type: Javadoc) {
+    options.encoding = "utf-8"
 }

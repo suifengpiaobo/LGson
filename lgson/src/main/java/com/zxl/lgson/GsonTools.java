@@ -1,7 +1,6 @@
-package com.zxl.gson;
+package com.zxl.lgson;
 
 import android.os.Looper;
-
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
