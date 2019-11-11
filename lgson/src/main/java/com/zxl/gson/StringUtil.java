@@ -1,4 +1,4 @@
-package com.zxl.lgson;
+package com.zxl.gson;
 
 import android.util.Log;
 

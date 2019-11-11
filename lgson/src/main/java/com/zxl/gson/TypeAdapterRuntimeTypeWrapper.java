@@ -1,4 +1,4 @@
-package com.zxl.lgson;
+package com.zxl.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
