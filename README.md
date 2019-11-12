@@ -22,7 +22,7 @@ lvy:
 </dependency>
 ```
 
-#2、使用方法：
+# 2、使用方法：
 ```
 LGson工具提供以下方法：
 public static <T> T parseDataByGson(String jsonString, Class<T> tClass){}
