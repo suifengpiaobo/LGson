@@ -2,7 +2,7 @@
 gradle：
 ```
 implementation 'com.google.code.gson:gson:2.8.6'
-implementation 'com.zxl.lgson:lgson:1.0.0'
+implementation 'com.zxl.lgson:lgson:1.0.1'
 ```
 
 maven:
@@ -10,14 +10,14 @@ maven:
 <dependency>
   <groupId>com.zxl.lgson</groupId>
   <artifactId>lgson</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
 
 lvy:
 ```
-<dependency org='com.zxl.lgson' name='lgson' rev='1.0.0'>
+<dependency org='com.zxl.lgson' name='lgson' rev='1.0.1'>
   <artifact name='lgson' ext='pom' ></artifact>
 </dependency>
 ```

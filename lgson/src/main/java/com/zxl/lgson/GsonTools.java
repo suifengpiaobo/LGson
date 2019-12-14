@@ -72,8 +72,11 @@ public class GsonTools {
     }
 
     /**
-     * @param type 0(int.class, Integer.class ) 1(short.class, Short.class) 2(long.class,
-     * Long.class) 3(double.class, Double.class) 4(float.class, Float.class)
+     * @param type 0(int.class, Integer.class )
+     *             1(short.class, Short.class)
+     *             2(long.class,Long.class)
+     *             3(double.class, Double.class)
+     *             4(float.class, Float.class)
      *
      * @return
      */

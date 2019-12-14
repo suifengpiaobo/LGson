@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * Description
  * 使用方法
- * 1）MGson.newGson()得到Gson对象
+ * 1）LGson.newGson()得到Gson对象
  * 2)然后使用相对应的gson方法即可
  * 解决:
  * 1)要{}后端给[]返回实例对象

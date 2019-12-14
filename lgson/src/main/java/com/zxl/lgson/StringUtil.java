@@ -1,5 +1,7 @@
 package com.zxl.lgson;
+import	java.util.Objects;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -20,8 +22,7 @@ public class StringUtil {
      * @return true—为空，false—不为空
      */
     public static boolean isStringEmpty(String str) {
-        return str == null || "null".equals(str)
-                || str.replace(" ", "").trim().length() == 0;
+        return TextUtils.isEmpty(str);
     }
 
     /**
