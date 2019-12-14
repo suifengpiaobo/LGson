@@ -10,7 +10,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -27,7 +27,7 @@ android {
         artifactId = 'lgson'
         uploadName = 'LGson'
         repoName = "maven"
-        publishVersion = '1.0.0'
+        publishVersion = '1.0.1'
         userOrg = 'suifengpiaobo'
         groupId = 'com.zxl.lgson'
         desc = '解决因接口返回数据错误(如对象返回了数组，对象返回了null，数组返回对象等)，造成的解析错误。'
